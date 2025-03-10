@@ -7,13 +7,30 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+
+    
+
+    {{ govukNotificationBanner({
+  html: 'This version of the prototype is being actively worked on - some things might not work correctly and/or change very quickly.'
+}) }}
+
+<span class="govuk-caption-xl">Version 1</span>
 
     <h1 class="govuk-heading-xl">
       {{ serviceName }}
     </h1>
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+
+
+  <h2 class="govuk-heading-m" id="testing">Useful links</h2>
+
+      <ul class="govuk-list govuk-!-margin-bottom-9">
+        <li><a class="govuk-link govuk-link--no-visited-state" href="test-scenario">Testing instructions</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://app.mural.co/t/companieshouse8589/m/companieshouse8589/1730123413781/b8221a4f44aa2e7b0268597ac647a3de57ed7d0f">Screen flow (Mural)</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="../design-history">Interaction design history </a></li>
+        </ul>
+
+    
   </div>
 </div>
 
