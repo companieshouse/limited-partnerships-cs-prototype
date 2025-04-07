@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  
+
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>
+
+    
+  </div>
+  {% from "govuk/components/table/macro.njk" import govukTable %}
+
+{{ govukTable({
+  caption: "Dates and amounts",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Version"
+    },
+    {
+      text: "Status"
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<a href='/start'>Test 1</a>"
+      },
+      {
+        text: "Test."
+      }
+    ]
+  ]
+}) }}
+
+</div>
+
+{% endblock %}
