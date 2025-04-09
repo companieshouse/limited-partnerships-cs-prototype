@@ -19,4 +19,12 @@
 <p class="govuk-body"><strong>Why can't I see shareholders from previous filings?</strong></p>
 <p>We're updating our records to improve the accuracy of the Companies House register. You will not see any shareholder information from previous filings in this confirmation statement.</p>
 <p>You need to provide information about all current shareholders yourself.</p>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/shareholder-type"
+}) }}
+
 {% endblock %}
