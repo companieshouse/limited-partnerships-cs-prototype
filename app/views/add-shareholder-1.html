@@ -9,18 +9,28 @@
 
 
 {% block content %}
-<a href="/start-shareholders" class="govuk-back-link">Back</a>
-<span class="govuk-caption-m">Filing for: AAA ACQUISITIONS LIMITED (06473324)</span>
+<div class="govuk-width-container">
+  <a href="/start-shareholders" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-m">Filing for: AAA ACQUISITIONS LIMITED (06473324)</span>
 <h1 class="govuk-heading-l">Provide a full list of current shareholders</h1>
 
-<p class="govuk-body-l">Tell us about all people and companies that held shares on 15 December 2024, and how many they held on this date.
-</p>
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+Tell us about all people and companies that held shares on 15 December 2024, and how many they held on this date
+  </strong>
+</div>
 <p class="govuk-body"><strong>Why can't I see shareholders from previous filings?</strong></p>
 <p>We're updating our records to improve the accuracy of the Companies House register. You will not see any shareholder information from previous filings in this confirmation statement.</p>
 <p>You need to provide information about all current shareholders yourself.</p>
 {{ govukButton({
   text: "Add a person as a shareholder",
-  classes: "govuk-button--secondary"
+  classes: "govuk-button--secondary",
+  href: "/add-person-1"
 }) }}
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
@@ -37,6 +47,9 @@
   classes: "govuk-button--secondary"
 }) }}
 
-
+     </div>
+    </div>
+  </main>
+</div>
 
 {% endblock %}

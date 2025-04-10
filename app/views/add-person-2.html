@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="/add-shareholder-1" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-m">Filing for: AAA ACQUISITIONS LIMITED (06473324)</span>
+<h1 class="govuk-heading-l">Allocate shares to John Smith</h1>
+        
+
+
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Select share class",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "ordinaryA",
+      text: "Ordinary A"
+    },
+    {
+      value: "ordinaryB",
+      text: "Ordinary B"
+    }
+
+  ]
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Number of shares"
+  },
+  id: "event-name",
+  name: "eventName"
+}) }}
+
+     </div>
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
