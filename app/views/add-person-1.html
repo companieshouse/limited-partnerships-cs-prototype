@@ -13,7 +13,7 @@
         <span class="govuk-caption-m">Filing for: AAA ACQUISITIONS LIMITED (06473324)</span>
 <h1 class="govuk-heading-l">Add a person as a shareholder</h1>
         
- 
+  <form method="post" action="/add-person-2">
 
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -47,11 +47,10 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Continue",
-  href: "/add-person-2"
+  text: "Continue"
 }) }}
 
-
+ </form>
      </div>
     </div>
   </main>
