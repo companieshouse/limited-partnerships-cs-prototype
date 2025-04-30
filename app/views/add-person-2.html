@@ -14,14 +14,15 @@
 <h1 class="govuk-heading-l">Allocate shares to John Smith</h1>
         
 
-
+<form method="post" action="/shareholder-summary-1">
 
 {% from "govuk/components/select/macro.njk" import govukSelect %}
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
+
 {{ govukRadios({
-  name: "whereDoYouLive",
+  name: "share-class",
   fieldset: {
     legend: {
       text: "Select share class",
@@ -31,11 +32,11 @@
   },
   items: [
     {
-      value: "ordinaryA",
+      value: "Ordinary A",
       text: "Ordinary A"
     },
     {
-      value: "ordinaryB",
+      value: "Ordinary B",
       text: "Ordinary B"
     }
 
@@ -47,8 +48,8 @@
     text: "Number of shares"
   },
   classes: "govuk-input--width-5",
-  id: "width-5",
-  name: "width5"
+  id: "number-of-shares",
+  name: "number-of-shares"
 }) }}
 {{ govukButton({
   text: "Add another shareclass",
@@ -59,9 +60,9 @@
      </div>
     </div>
     {{ govukButton({
-  text: "Continue",
-  href: "/shareholder-summary-1"
+  text: "Continue"
 }) }}
+</form>
 
   </main>
 </div>
